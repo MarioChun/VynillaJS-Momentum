@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Somthing</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div class="js-clock">
-      <h1>00:00:00</h1>
-    </div>
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greeting greeting"></h4>
-    <form class="js-toDoForm">
-      <input type="text" placeholder="write a to do" />
-    </form>
-    <ul class="js-toDoList"></ul>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="centered">
+        <h2 id="clock">00:00:00</h2>
 
-    <script src="clock.js"></script>
-    <script src="gretting.js"></script>
-    <script src="todo.js"></script>
-  </body>
+        <form class="login-form hidden">
+            <input
+                required
+                maxlength="15" minlength="2"
+                type="text" placeholder="Please write your name and enter 🤩"
+            >
+            <!-- <input type="submit" value="Log In"> -->
+            <!-- It doesn't look good with button to me, so I deleted it and wrote "pls enter" on placeholder -->
+        </form>
+
+        <h1 id="greeting" class="hidden"></h1>
+        
+        <form id="todo-form">
+            <input type="text" placeholder="What is your main focus for today? 😎" required>
+        </form>
+
+        <ul id="todo-list">
+        </ul>
+    </div>
+
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+
+    <button id="changeBtn" class="hidden">Change Username</button>
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
 </html>
